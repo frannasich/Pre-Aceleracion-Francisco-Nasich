@@ -23,15 +23,15 @@ class MoviesListViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         self.viewModel = MoviesListViewModel(service: self.service, delegate: self)
         self.viewModel?.getMovies()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "MoviesListTableViewCell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         setupView()
     }
    
     private func setupView() {
         self.title = "Movies"
         navigationController?.navigationBar.prefersLargeTitles = true
-        self.tableView.register(UINib(nibName: "MoviesListTableViewCell", bundle: nil), forCellReuseIdentifier: "MoviesListTableViewCell")
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
     }
 }
 
@@ -57,7 +57,7 @@ extension MoviesListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MoviesListTableViewCell", for: indexPath) as! MoviesListTableViewCell
+        let cell = self.tableView.dequeueReusableCell(withIdentifier: "MoviesListTableViewCell", for: indexPath) as! MoviesListTableViewCell
         
         cell.MovieLabelName.text = self.viewModel?.getMovie(at: indexPath.row).title
         
