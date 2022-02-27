@@ -10,9 +10,5 @@ los detalles de la misma
 ## Desarrollo
 * Lenguaje: Swift
 * Patrón de Arquitectura: MVVM
-* API: [**Open Trivia**](## Desarrollo
-* Lenguaje: Swift
-* Patrón de Arquitectura: MVVM
 * API: [**The Movie Database (TMDb)**](https://opentdb.com/ "The Movie Database (TMDb)")
-* IDE: Xcode/ "Open Trivia")
 * IDE: Xcode
