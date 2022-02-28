@@ -20,6 +20,7 @@ class MoviesListViewModel {
     
     func getMovies(){
         moviesService.getMovies {movies in
+            self.delegate.toogleLoading()
             self.movies = movies
             self.delegate.reloadTable()
         } onError: {

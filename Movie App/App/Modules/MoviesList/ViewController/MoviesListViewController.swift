@@ -10,7 +10,6 @@ import UIKit
 protocol MoviesListDelegate {
     func toogleLoading()
     func reloadTable()
-    func showError()
 }
 
 class MoviesListViewController: UIViewController, UITableViewDelegate {
@@ -27,6 +26,12 @@ class MoviesListViewController: UIViewController, UITableViewDelegate {
         setupView()
         self.centerTitle()
     }
+    
+    func showMovieDetail(for MovieList: MovieList){
+            let moviesDetailViewController = MoviesDetailViewController(nibName: "MoviesDetailViewController", bundle: nil)
+            moviesDetailViewController.title = MovieList.title
+        navigationController?.pushViewController(moviesDetailViewController, animated: true)
+    }
    
     private func setupView() {
         self.title = "Movies"
@@ -39,15 +44,20 @@ class MoviesListViewController: UIViewController, UITableViewDelegate {
 
 extension MoviesListViewController: MoviesListDelegate{
     func toogleLoading() {
-        
+        print("Cargando")
     }
     
     func reloadTable() {
         self.tableView.reloadData()
     }
     
-    func showError() {
-        print("Ocurrio un error")
+}
+
+extension MoviesListViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.viewModel?.getMovie(at: indexPath.row)
+        let movieDetail = MoviesDetailViewController()
+        self.navigationController?.pushViewController(movieDetail, animated: true)
     }
 }
 

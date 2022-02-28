@@ -22,6 +22,11 @@
 		A133B27A27CAC1C1009EBED9 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133B27927CAC1C1009EBED9 /* MovieList.swift */; };
 		A133B27D27CAC5EB009EBED9 /* MoviesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133B27B27CAC5EB009EBED9 /* MoviesListTableViewCell.swift */; };
 		A133B27E27CAC5EB009EBED9 /* MoviesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A133B27C27CAC5EB009EBED9 /* MoviesListTableViewCell.xib */; };
+		A187BB1027CD7D70008E203F /* MoviesDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187BB0F27CD7D70008E203F /* MoviesDetailService.swift */; };
+		A187BB1227CD7DAE008E203F /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187BB1127CD7DAE008E203F /* MovieDetailResponse.swift */; };
+		A1E5122327CD43E100833400 /* MoviesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E5122127CD43E000833400 /* MoviesDetailViewController.swift */; };
+		A1E5122427CD43E100833400 /* MoviesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E5122227CD43E000833400 /* MoviesDetailViewController.xib */; };
+		A1E5122627CD465C00833400 /* MoviesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E5122527CD465C00833400 /* MoviesDetailViewModel.swift */; };
 		A1F3DB3827CC125C006B2F9D /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3DB3627CC125C006B2F9D /* MoviesListViewController.swift */; };
 		A1F3DB3927CC125C006B2F9D /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F3DB3727CC125C006B2F9D /* MoviesListViewController.xib */; };
 /* End PBXBuildFile section */
@@ -44,6 +49,11 @@
 		A133B27927CAC1C1009EBED9 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		A133B27B27CAC5EB009EBED9 /* MoviesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTableViewCell.swift; sourceTree = "<group>"; };
 		A133B27C27CAC5EB009EBED9 /* MoviesListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListTableViewCell.xib; sourceTree = "<group>"; };
+		A187BB0F27CD7D70008E203F /* MoviesDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailService.swift; sourceTree = "<group>"; };
+		A187BB1127CD7DAE008E203F /* MovieDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailResponse.swift; sourceTree = "<group>"; };
+		A1E5122127CD43E000833400 /* MoviesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailViewController.swift; sourceTree = "<group>"; };
+		A1E5122227CD43E000833400 /* MoviesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesDetailViewController.xib; sourceTree = "<group>"; };
+		A1E5122527CD465C00833400 /* MoviesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailViewModel.swift; sourceTree = "<group>"; };
 		A1F3DB3627CC125C006B2F9D /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		A1F3DB3727CC125C006B2F9D /* MoviesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListViewController.xib; sourceTree = "<group>"; };
 		E3B8A59927CD2E77E7A3CDEA /* Pods-Movie App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie App.release.xcconfig"; path = "Target Support Files/Pods-Movie App/Pods-Movie App.release.xcconfig"; sourceTree = "<group>"; };
@@ -135,7 +145,7 @@
 				A133B27227CABF81009EBED9 /* View */,
 				A133B27127CABF79009EBED9 /* ViewController */,
 				A133B27027CABF71009EBED9 /* ViewModel */,
-				A133B26F27CABF5F009EBED9 /* Service */,
+				A1E5122727CD7C1F00833400 /* MoviesListService */,
 			);
 			path = MoviesList;
 			sourceTree = "<group>";
@@ -143,6 +153,10 @@
 		A133B26627CAAFB2009EBED9 /* MoviesDetail */ = {
 			isa = PBXGroup;
 			children = (
+				A1E5122027CD439C00833400 /* View */,
+				A1E5121E27CD434700833400 /* ViewController */,
+				A1E5121F27CD438E00833400 /* ViewModel */,
+				A187BB0E27CD7D50008E203F /* Service */,
 			);
 			path = MoviesDetail;
 			sourceTree = "<group>";
@@ -152,6 +166,7 @@
 			children = (
 				A133B26B27CAB298009EBED9 /* MovieListResponse.swift */,
 				A133B27927CAC1C1009EBED9 /* MovieList.swift */,
+				A187BB1127CD7DAE008E203F /* MovieDetailResponse.swift */,
 				A133B26D27CABE26009EBED9 /* MovieDetail.swift */,
 				A133B27727CAC0A9009EBED9 /* Constants.swift */,
 			);
@@ -164,14 +179,6 @@
 				A133B26927CAB028009EBED9 /* ApiManager.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		A133B26F27CABF5F009EBED9 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-				A133B27327CABFA0009EBED9 /* MoviesListService.swift */,
-			);
-			path = Service;
 			sourceTree = "<group>";
 		};
 		A133B27027CABF71009EBED9 /* ViewModel */ = {
@@ -198,6 +205,46 @@
 				A133B27C27CAC5EB009EBED9 /* MoviesListTableViewCell.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A187BB0E27CD7D50008E203F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A187BB0F27CD7D70008E203F /* MoviesDetailService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A1E5121E27CD434700833400 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A1E5122127CD43E000833400 /* MoviesDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A1E5121F27CD438E00833400 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A1E5122527CD465C00833400 /* MoviesDetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A1E5122027CD439C00833400 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A1E5122227CD43E000833400 /* MoviesDetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A1E5122727CD7C1F00833400 /* MoviesListService */ = {
+			isa = PBXGroup;
+			children = (
+				A133B27327CABFA0009EBED9 /* MoviesListService.swift */,
+			);
+			path = MoviesListService;
 			sourceTree = "<group>";
 		};
 		E615614986B2485282D81272 /* Pods */ = {
@@ -280,6 +327,7 @@
 				A133B25A27CAAD28009EBED9 /* LaunchScreen.storyboard in Resources */,
 				A133B25727CAAD28009EBED9 /* Assets.xcassets in Resources */,
 				A133B27E27CAC5EB009EBED9 /* MoviesListTableViewCell.xib in Resources */,
+				A1E5122427CD43E100833400 /* MoviesDetailViewController.xib in Resources */,
 				A1F3DB3927CC125C006B2F9D /* MoviesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,15 +383,19 @@
 			files = (
 				A133B26A27CAB028009EBED9 /* ApiManager.swift in Sources */,
 				A133B27427CABFA0009EBED9 /* MoviesListService.swift in Sources */,
+				A1E5122627CD465C00833400 /* MoviesDetailViewModel.swift in Sources */,
 				A133B26C27CAB298009EBED9 /* MovieListResponse.swift in Sources */,
 				A133B25227CAAD08009EBED9 /* ViewController.swift in Sources */,
 				A133B27D27CAC5EB009EBED9 /* MoviesListTableViewCell.swift in Sources */,
+				A187BB1227CD7DAE008E203F /* MovieDetailResponse.swift in Sources */,
+				A1E5122327CD43E100833400 /* MoviesDetailViewController.swift in Sources */,
 				A133B26E27CABE26009EBED9 /* MovieDetail.swift in Sources */,
 				A133B27A27CAC1C1009EBED9 /* MovieList.swift in Sources */,
 				A133B24E27CAAD08009EBED9 /* AppDelegate.swift in Sources */,
 				A133B25027CAAD08009EBED9 /* SceneDelegate.swift in Sources */,
 				A133B27627CAC01E009EBED9 /* MoviesListViewModel.swift in Sources */,
 				A133B27827CAC0A9009EBED9 /* Constants.swift in Sources */,
+				A187BB1027CD7D70008E203F /* MoviesDetailService.swift in Sources */,
 				A1F3DB3827CC125C006B2F9D /* MoviesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
