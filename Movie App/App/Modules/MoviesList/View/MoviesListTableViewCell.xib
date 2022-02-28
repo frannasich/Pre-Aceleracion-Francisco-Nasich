@@ -28,9 +28,6 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
-            <connections>
-                <outlet property="movieLabelName" destination="VNg-p6-dY4" id="Zxg-yX-DpR"/>
-            </connections>
             <point key="canvasLocation" x="-191.30434782608697" y="8.7053571428571423"/>
         </tableViewCell>
     </objects>
