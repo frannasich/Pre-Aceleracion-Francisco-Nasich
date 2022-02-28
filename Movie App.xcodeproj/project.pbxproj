@@ -22,8 +22,8 @@
 		A133B27A27CAC1C1009EBED9 /* MovieList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133B27927CAC1C1009EBED9 /* MovieList.swift */; };
 		A133B27D27CAC5EB009EBED9 /* MoviesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133B27B27CAC5EB009EBED9 /* MoviesListTableViewCell.swift */; };
 		A133B27E27CAC5EB009EBED9 /* MoviesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A133B27C27CAC5EB009EBED9 /* MoviesListTableViewCell.xib */; };
-		A133B28127CAC633009EBED9 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133B27F27CAC633009EBED9 /* MoviesListViewController.swift */; };
-		A133B28227CAC633009EBED9 /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A133B28027CAC633009EBED9 /* MoviesListViewController.xib */; };
+		A1F3DB3827CC125C006B2F9D /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1F3DB3627CC125C006B2F9D /* MoviesListViewController.swift */; };
+		A1F3DB3927CC125C006B2F9D /* MoviesListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1F3DB3727CC125C006B2F9D /* MoviesListViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,8 +44,8 @@
 		A133B27927CAC1C1009EBED9 /* MovieList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieList.swift; sourceTree = "<group>"; };
 		A133B27B27CAC5EB009EBED9 /* MoviesListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListTableViewCell.swift; sourceTree = "<group>"; };
 		A133B27C27CAC5EB009EBED9 /* MoviesListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListTableViewCell.xib; sourceTree = "<group>"; };
-		A133B27F27CAC633009EBED9 /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
-		A133B28027CAC633009EBED9 /* MoviesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListViewController.xib; sourceTree = "<group>"; };
+		A1F3DB3627CC125C006B2F9D /* MoviesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
+		A1F3DB3727CC125C006B2F9D /* MoviesListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListViewController.xib; sourceTree = "<group>"; };
 		E3B8A59927CD2E77E7A3CDEA /* Pods-Movie App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie App.release.xcconfig"; path = "Target Support Files/Pods-Movie App/Pods-Movie App.release.xcconfig"; sourceTree = "<group>"; };
 		F405D341D7320A8647724619 /* Pods-Movie App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movie App.debug.xcconfig"; path = "Target Support Files/Pods-Movie App/Pods-Movie App.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -185,7 +185,8 @@
 		A133B27127CABF79009EBED9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				A133B27F27CAC633009EBED9 /* MoviesListViewController.swift */,
+				A1F3DB3627CC125C006B2F9D /* MoviesListViewController.swift */,
+				A1F3DB3727CC125C006B2F9D /* MoviesListViewController.xib */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -195,7 +196,6 @@
 			children = (
 				A133B27B27CAC5EB009EBED9 /* MoviesListTableViewCell.swift */,
 				A133B27C27CAC5EB009EBED9 /* MoviesListTableViewCell.xib */,
-				A133B28027CAC633009EBED9 /* MoviesListViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,8 +279,8 @@
 			files = (
 				A133B25A27CAAD28009EBED9 /* LaunchScreen.storyboard in Resources */,
 				A133B25727CAAD28009EBED9 /* Assets.xcassets in Resources */,
-				A133B28227CAC633009EBED9 /* MoviesListViewController.xib in Resources */,
 				A133B27E27CAC5EB009EBED9 /* MoviesListTableViewCell.xib in Resources */,
+				A1F3DB3927CC125C006B2F9D /* MoviesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +344,7 @@
 				A133B25027CAAD08009EBED9 /* SceneDelegate.swift in Sources */,
 				A133B27627CAC01E009EBED9 /* MoviesListViewModel.swift in Sources */,
 				A133B27827CAC0A9009EBED9 /* Constants.swift in Sources */,
-				A133B28127CAC633009EBED9 /* MoviesListViewController.swift in Sources */,
+				A1F3DB3827CC125C006B2F9D /* MoviesListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

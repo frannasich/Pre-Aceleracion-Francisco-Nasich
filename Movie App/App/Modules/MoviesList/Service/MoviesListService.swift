@@ -27,6 +27,7 @@ class MoviesListService{
                     }
                 } catch{
                     onError()
+                    print(error)
                 }
                 
             case .failure(_):

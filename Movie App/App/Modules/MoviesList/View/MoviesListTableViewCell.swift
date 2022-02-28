@@ -9,8 +9,9 @@ import UIKit
 
 class MoviesListTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var MovieImage: UIImageView!
-    @IBOutlet weak var MovieLabelName: UILabel!
+
+    @IBOutlet weak var movieLabelName: UILabel!
+    
     
     
     override func awakeFromNib() {
