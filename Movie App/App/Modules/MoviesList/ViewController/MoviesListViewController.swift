@@ -25,6 +25,7 @@ class MoviesListViewController: UIViewController, UITableViewDelegate {
         self.viewModel = MoviesListViewModel(service: self.service, delegate: self)
         self.viewModel?.getMovies()
         setupView()
+        self.centerTitle()
     }
    
     private func setupView() {
@@ -66,4 +67,17 @@ extension MoviesListViewController: UITableViewDataSource {
     }
     
     
+}
+
+extension UIViewController{
+    func centerTitle(){
+        for navItem in(self.navigationController?.navigationBar.subviews)! {
+             for itemSubView in navItem.subviews {
+                 if let largeLabel = itemSubView as? UILabel {
+                    largeLabel.center = CGPoint(x: navItem.bounds.width/2, y: navItem.bounds.height/2)
+                    return
+                 }
+             }
+        }
+    }
 }

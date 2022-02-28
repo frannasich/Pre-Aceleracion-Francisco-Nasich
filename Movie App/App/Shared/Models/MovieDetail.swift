@@ -12,4 +12,5 @@ struct MovieDetail: Codable {
     let originalLanguage: String
     let popularity: Int
     let releaseDate: String
+    let overview: String
 }
