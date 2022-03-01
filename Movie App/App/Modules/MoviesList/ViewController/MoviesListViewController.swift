@@ -50,7 +50,7 @@ extension MoviesListViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movie = self.viewModel?.getMovie(at: indexPath.row)
         let movieDetail = MoviesDetailViewController()
-        movieDetail.movieUrl = "\(movie?.id)"
+        movieDetail.movieId = "\(String(describing: movie?.id))"
         self.navigationController?.pushViewController(movieDetail, animated: true)
     }
 }

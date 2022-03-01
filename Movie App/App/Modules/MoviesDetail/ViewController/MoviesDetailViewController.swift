@@ -23,12 +23,11 @@ class MoviesDetailViewController: UIViewController {
     
     private let service = MoviesDetailService()
     private var viewModel: MoviesDetailViewModel?
-    var movieUrl: String?
-    
+    var movieId: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let url = movieUrl {
+        if let url = movieId  {
             self.viewModel = MoviesDetailViewModel(movieUrl: url, service: self.service, delegate: self)
             self.viewModel?.getMovie()
         }
