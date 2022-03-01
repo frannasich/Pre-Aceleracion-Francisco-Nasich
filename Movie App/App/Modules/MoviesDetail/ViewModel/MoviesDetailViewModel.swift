@@ -10,17 +10,17 @@ import Foundation
 class MoviesDetailViewModel {
     private var moviesService: MoviesDetailService
     private var delegate: MoviesDetailDelegate
-    private var movieId: String
+    private var movieUrl: String
     
     init(movieUrl: String ,service: MoviesDetailService, delegate: MoviesDetailDelegate) {
         self.moviesService = service
         self.delegate = delegate
-        self.movieId = movieUrl
+        self.movieUrl = movieUrl
     }
     
     func getMovie() {
             self.delegate.toogleLoading()
-        moviesService.getMovie(movieUrl: Constants().MoviesDetailURL + movieId + "?" + Constants().ApiKey, onComplete: { movie in
+        moviesService.getMovie(movieUrl: self.movieUrl, onComplete: { movie in
                 self.delegate.loadMovieData(movie: movie)
         }, onError: {
             self.delegate.showError()

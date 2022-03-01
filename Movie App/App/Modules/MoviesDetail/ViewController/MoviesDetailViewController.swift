@@ -23,21 +23,22 @@ class MoviesDetailViewController: UIViewController {
     
     private let service = MoviesDetailService()
     private var viewModel: MoviesDetailViewModel?
-    var movieId: String?
+    var movieUrl: String!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let url = movieId  {
-            self.viewModel = MoviesDetailViewModel(movieUrl: Constants().MoviesDetailURL + url + "?" + Constants().ApiKey, service: self.service, delegate: self)
+            self.viewModel = MoviesDetailViewModel(movieUrl: movieUrl, service: self.service, delegate: self)
             self.viewModel?.getMovie()
+            setupView()
         }
-    }
     
     private func setupView() {
         self.title = "Detalles de la película"
     }
+    
+    }
+    
 
-}
 
 extension MoviesDetailViewController: MoviesDetailDelegate {
 
