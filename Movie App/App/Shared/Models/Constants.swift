@@ -8,6 +8,6 @@
 import Foundation
 
 struct Constants {
-    let MoviesListURL = "https://api.themoviedb.org/3/movie/popular?api_key="
-    let ApiKey = "fccdb17d1a079606b8be9f773c17ab1f"
+    let MoviesListURL = "https://api.themoviedb.org/3/movie/popular?"
+    let ApiKey = "api_key=fccdb17d1a079606b8be9f773c17ab1f"
 }
