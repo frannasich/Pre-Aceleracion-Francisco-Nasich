@@ -11,7 +11,7 @@ class MoviesDetailService{
     
     
     func getMovie(onComplete: @escaping (MovieDetail) -> Void, onError: @escaping () -> Void) {
-        let URL = Constants().MoviesListURL
+        let URL = Constants().MoviesDetailURL
         let apiKey = Constants().ApiKey
         let movieId = MoviesDetailViewController().movieId ?? "\(634649)"
         ApiManager.shared.get(url: (URL + movieId + "?" + apiKey)) {response in
