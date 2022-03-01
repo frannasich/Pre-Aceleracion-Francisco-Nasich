@@ -28,7 +28,7 @@ class MoviesDetailViewController: UIViewController {
         super.viewDidLoad()
 
         if let url = movieId  {
-            self.viewModel = MoviesDetailViewModel(movieUrl: url, service: self.service, delegate: self)
+            self.viewModel = MoviesDetailViewModel(movieId: Constants().MoviesDetailURL + url + "?" + Constants().ApiKey, service: self.service, delegate: self)
             self.viewModel?.getMovie()
         }
     }

@@ -10,10 +10,9 @@ import Foundation
 class MoviesDetailService{
     
     
-    func getMovie(onComplete: @escaping (MovieDetail) -> Void, onError: @escaping () -> Void) {
+    func getMovie(movieId: String, onComplete: @escaping (MovieDetail) -> Void, onError: @escaping () -> Void) {
         let URL = Constants().MoviesDetailURL
         let apiKey = Constants().ApiKey
-        let movieId = MoviesDetailViewController().movieId ?? "\(634649)"
         ApiManager.shared.get(url: (URL + movieId + "?" + apiKey)) {response in
             switch response {
             case .success(let data):
