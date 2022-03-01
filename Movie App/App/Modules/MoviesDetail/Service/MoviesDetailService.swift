@@ -14,7 +14,7 @@ class MoviesDetailService{
         let URL = Constants().MoviesListURL
         let apiKey = Constants().ApiKey
         let movieId = MoviesDetailViewController().movieId ?? ""
-        ApiManager.shared.get(url: (URL + movieId + apiKey)) {response in
+        ApiManager.shared.get(url: (URL + movieId + "?" + apiKey)) {response in
             switch response {
             case .success(let data):
                 
