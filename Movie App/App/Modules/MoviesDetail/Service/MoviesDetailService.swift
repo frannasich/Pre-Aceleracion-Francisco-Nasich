@@ -10,10 +10,8 @@ import Foundation
 class MoviesDetailService{
     
     
-    func getMovie(movieId: String, onComplete: @escaping (MovieDetail) -> Void, onError: @escaping () -> Void) {
-        let URL = Constants().MoviesDetailURL
-        let apiKey = Constants().ApiKey
-        ApiManager.shared.get(url: (URL + movieId + "?" + apiKey)) {response in
+    func getMovie(movieUrl: String, onComplete: @escaping (MovieDetail) -> Void, onError: @escaping () -> Void) {
+        ApiManager.shared.get(url: movieUrl) {response in
             switch response {
             case .success(let data):
                 
