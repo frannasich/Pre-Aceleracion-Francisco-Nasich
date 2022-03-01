@@ -24,6 +24,8 @@
 		A133B27E27CAC5EB009EBED9 /* MoviesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A133B27C27CAC5EB009EBED9 /* MoviesListTableViewCell.xib */; };
 		A187BB1027CD7D70008E203F /* MoviesDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187BB0F27CD7D70008E203F /* MoviesDetailService.swift */; };
 		A187BB1227CD7DAE008E203F /* MovieDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187BB1127CD7DAE008E203F /* MovieDetailResponse.swift */; };
+		A187BB1627CECD9F008E203F /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A187BB1427CECD9F008E203F /* UserNameViewController.swift */; };
+		A187BB1727CECD9F008E203F /* UserNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A187BB1527CECD9F008E203F /* UserNameViewController.xib */; };
 		A1E5122327CD43E100833400 /* MoviesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E5122127CD43E000833400 /* MoviesDetailViewController.swift */; };
 		A1E5122427CD43E100833400 /* MoviesDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1E5122227CD43E000833400 /* MoviesDetailViewController.xib */; };
 		A1E5122627CD465C00833400 /* MoviesDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E5122527CD465C00833400 /* MoviesDetailViewModel.swift */; };
@@ -51,6 +53,8 @@
 		A133B27C27CAC5EB009EBED9 /* MoviesListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesListTableViewCell.xib; sourceTree = "<group>"; };
 		A187BB0F27CD7D70008E203F /* MoviesDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailService.swift; sourceTree = "<group>"; };
 		A187BB1127CD7DAE008E203F /* MovieDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailResponse.swift; sourceTree = "<group>"; };
+		A187BB1427CECD9F008E203F /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
+		A187BB1527CECD9F008E203F /* UserNameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserNameViewController.xib; sourceTree = "<group>"; };
 		A1E5122127CD43E000833400 /* MoviesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailViewController.swift; sourceTree = "<group>"; };
 		A1E5122227CD43E000833400 /* MoviesDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoviesDetailViewController.xib; sourceTree = "<group>"; };
 		A1E5122527CD465C00833400 /* MoviesDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDetailViewModel.swift; sourceTree = "<group>"; };
@@ -117,8 +121,9 @@
 		A133B26227CAAF58009EBED9 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				A133B26627CAAFB2009EBED9 /* MoviesDetail */,
+				A187BB1327CECD4B008E203F /* UserName */,
 				A133B26527CAAFAC009EBED9 /* MoviesList */,
+				A133B26627CAAFB2009EBED9 /* MoviesDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -213,6 +218,15 @@
 				A187BB0F27CD7D70008E203F /* MoviesDetailService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		A187BB1327CECD4B008E203F /* UserName */ = {
+			isa = PBXGroup;
+			children = (
+				A187BB1427CECD9F008E203F /* UserNameViewController.swift */,
+				A187BB1527CECD9F008E203F /* UserNameViewController.xib */,
+			);
+			path = UserName;
 			sourceTree = "<group>";
 		};
 		A1E5121E27CD434700833400 /* ViewController */ = {
@@ -328,6 +342,7 @@
 				A133B25727CAAD28009EBED9 /* Assets.xcassets in Resources */,
 				A133B27E27CAC5EB009EBED9 /* MoviesListTableViewCell.xib in Resources */,
 				A1E5122427CD43E100833400 /* MoviesDetailViewController.xib in Resources */,
+				A187BB1727CECD9F008E203F /* UserNameViewController.xib in Resources */,
 				A1F3DB3927CC125C006B2F9D /* MoviesListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +412,7 @@
 				A133B27827CAC0A9009EBED9 /* Constants.swift in Sources */,
 				A187BB1027CD7D70008E203F /* MoviesDetailService.swift in Sources */,
 				A1F3DB3827CC125C006B2F9D /* MoviesListViewController.swift in Sources */,
+				A187BB1627CECD9F008E203F /* UserNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

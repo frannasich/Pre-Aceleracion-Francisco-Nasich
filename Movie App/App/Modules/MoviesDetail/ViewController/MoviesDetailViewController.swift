@@ -33,7 +33,7 @@ class MoviesDetailViewController: UIViewController {
         }
     
     private func setupView() {
-        self.title = "Detalles de la película"
+        self.title = "Movies Details"
     }
     
     }
