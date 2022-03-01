@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct MovieDetailResponse: Codable {
-    let results: [MovieDetail]
-}
+//struct MovieDetailResponse: Codable {
+//    let results: [MovieDetail]
+//}

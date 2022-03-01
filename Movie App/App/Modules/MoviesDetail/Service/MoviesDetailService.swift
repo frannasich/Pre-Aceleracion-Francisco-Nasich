@@ -9,8 +9,10 @@ import Foundation
 
 class MoviesDetailService{
     
-    func getMovies(onComplete: @escaping ([MovieDetail]) -> Void, onError: @escaping () -> Void) {
-        ApiManager.shared.get(url: Constants().MoviesListURL) {response in
+    func getMovie(onComplete: @escaping (MovieDetail) -> Void, onError: @escaping () -> Void) {
+        let URL = Constants().MoviesListURL
+        let apiKey = Constants().ApiKey
+        ApiManager.shared.get(url: (URL + apiKey)) {response in
             switch response {
             case .success(let data):
                 
@@ -19,9 +21,9 @@ class MoviesDetailService{
                     if let data = data{
                         let decoder = JSONDecoder()
                         decoder.keyDecodingStrategy = .convertFromSnakeCase
-                        let movieResponse = try decoder.decode(MovieDetailResponse.self, from: data)
-                        print(movieResponse.results)
-                        onComplete(movieResponse.results)
+                        let movieResponse = try decoder.decode(MovieDetail.self, from: data)
+                        print(movieResponse)
+                        onComplete(movieResponse)
                     }else{
                         onError()
                     }

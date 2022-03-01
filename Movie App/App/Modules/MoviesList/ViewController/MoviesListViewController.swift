@@ -24,15 +24,8 @@ class MoviesListViewController: UIViewController, UITableViewDelegate {
         self.viewModel = MoviesListViewModel(service: self.service, delegate: self)
         self.viewModel?.getMovies()
         setupView()
-        self.centerTitle()
     }
     
-    func showMovieDetail(for MovieList: MovieList){
-            let moviesDetailViewController = MoviesDetailViewController(nibName: "MoviesDetailViewController", bundle: nil)
-            moviesDetailViewController.title = MovieList.title
-        navigationController?.pushViewController(moviesDetailViewController, animated: true)
-    }
-   
     private func setupView() {
         self.title = "Movies"
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -55,8 +48,9 @@ extension MoviesListViewController: MoviesListDelegate{
 
 extension MoviesListViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.viewModel?.getMovie(at: indexPath.row)
+        let movie = self.viewModel?.getMovie(at: indexPath.row)
         let movieDetail = MoviesDetailViewController()
+        movieDetail.movieUrl = "\(movie?.id)"
         self.navigationController?.pushViewController(movieDetail, animated: true)
     }
 }
@@ -79,15 +73,3 @@ extension MoviesListViewController: UITableViewDataSource {
     
 }
 
-extension UIViewController{
-    func centerTitle(){
-        for navItem in(self.navigationController?.navigationBar.subviews)! {
-             for itemSubView in navItem.subviews {
-                 if let largeLabel = itemSubView as? UILabel {
-                    largeLabel.center = CGPoint(x: navItem.bounds.width/2, y: navItem.bounds.height/2)
-                    return
-                 }
-             }
-        }
-    }
-}

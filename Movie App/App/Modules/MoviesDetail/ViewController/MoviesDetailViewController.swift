@@ -7,7 +7,7 @@
 
 protocol MoviesDetailDelegate {
     func toogleLoading()
-    func loadMovieData()
+    func loadMovieData(movie : MovieDetail)
     func showError()
 }
 
@@ -23,17 +23,19 @@ class MoviesDetailViewController: UIViewController {
     
     private let service = MoviesDetailService()
     private var viewModel: MoviesDetailViewModel?
-    private let movies: MovieDetail?
+    var movieUrl: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.viewModel = MoviesDetailViewModel(service: self.service, delegate: self)
+        if let url = movieUrl {
+            self.viewModel = MoviesDetailViewModel(movieUrl: url, service: self.service, delegate: self)
+            self.viewModel?.getMovie()
+        }
     }
     
     private func setupView() {
         self.title = "Detalles de la película"
-        navigationItem.largeTitleDisplayMode = .never
     }
 
 }
@@ -44,12 +46,12 @@ extension MoviesDetailViewController: MoviesDetailDelegate {
         print("Cargando")
     }
     
-    func loadMovieData() {
-        self.movieDetailTitle.text = movies?.title
-        self.originalLanguage.text = movies?.originalLanguage
-        self.moviePopularity.text = String(describing: movies?.popularity)
-        self.movieReleaseDate.text = movies?.releaseDate
-        self.movieOverview.text = movies?.overview
+    func loadMovieData(movie: MovieDetail) {
+        self.movieDetailTitle.text = movie.title
+        self.originalLanguage.text = movie.originalLanguage
+        self.moviePopularity.text = String(describing: movie.popularity)
+        self.movieReleaseDate.text = movie.releaseDate
+        self.movieOverview.text = movie.overview
     }
     
     func showError() {
