@@ -15,6 +15,7 @@ import UIKit
 
 class MoviesDetailViewController: UIViewController {
 
+    @IBOutlet weak var movieImagePortrait: UIImageView!
     @IBOutlet weak var movieDetailTitle: UILabel!
     @IBOutlet weak var originalLanguage: UILabel!
     @IBOutlet weak var moviePopularity: UILabel!
