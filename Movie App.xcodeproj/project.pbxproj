@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6BD01A37235A61D7215E46CA /* Pods_Movie_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DB99FDBCF09D14138C1DCE6 /* Pods_Movie_App.framework */; };
+		A11DE1B527D04A3A00570AD8 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11DE1B427D04A3A00570AD8 /* UIImageView+Extension.swift */; };
 		A133B24E27CAAD08009EBED9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133B24D27CAAD08009EBED9 /* AppDelegate.swift */; };
 		A133B25027CAAD08009EBED9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133B24F27CAAD08009EBED9 /* SceneDelegate.swift */; };
 		A133B25227CAAD08009EBED9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133B25127CAAD08009EBED9 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		1DB99FDBCF09D14138C1DCE6 /* Pods_Movie_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Movie_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A11DE1B427D04A3A00570AD8 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		A133B24A27CAAD08009EBED9 /* Movie App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Movie App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A133B24D27CAAD08009EBED9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A133B24F27CAAD08009EBED9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 		A133B26327CAAF61009EBED9 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A11DE1B427D04A3A00570AD8 /* UIImageView+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				A133B27827CAC0A9009EBED9 /* Constants.swift in Sources */,
 				A187BB1027CD7D70008E203F /* MoviesDetailService.swift in Sources */,
 				A1F3DB3827CC125C006B2F9D /* MoviesListViewController.swift in Sources */,
+				A11DE1B527D04A3A00570AD8 /* UIImageView+Extension.swift in Sources */,
 				A187BB1627CECD9F008E203F /* UserNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,4 +10,5 @@ import Foundation
 struct MovieList: Codable {
     let id: Int
     let title: String
+    let backdropPath: String?
 }

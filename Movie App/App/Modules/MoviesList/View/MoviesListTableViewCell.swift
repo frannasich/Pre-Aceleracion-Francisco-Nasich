@@ -10,6 +10,7 @@ import UIKit
 class MoviesListTableViewCell: UITableViewCell {
 
 
+    @IBOutlet weak var imagePortraitViewCell: UIImageView!
     @IBOutlet weak var movieLabelName: UILabel!
     
     

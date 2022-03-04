@@ -9,7 +9,6 @@ import Foundation
 
 class MoviesDetailService{
     
-    
     func getMovie(movieUrl: String, onComplete: @escaping (MovieDetail) -> Void, onError: @escaping () -> Void) {
         ApiManager.shared.get(url: movieUrl) {response in
             switch response {

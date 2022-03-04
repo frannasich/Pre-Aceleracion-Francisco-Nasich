@@ -20,18 +20,20 @@ class MoviesDetailViewController: UIViewController {
     @IBOutlet weak var originalLanguage: UILabel!
     @IBOutlet weak var moviePopularity: UILabel!
     @IBOutlet weak var movieReleaseDate: UILabel!
-    @IBOutlet weak var movieOverview: UITextView!
+
+    @IBOutlet weak var movieOverview: UILabel!
     
     private let service = MoviesDetailService()
     private var viewModel: MoviesDetailViewModel?
-    var movieUrl: String!
+    var movieUrl: String?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-            self.viewModel = MoviesDetailViewModel(movieUrl: movieUrl, service: self.service, delegate: self)
+        if let url = movieUrl {
+            self.viewModel = MoviesDetailViewModel(movieUrl: url, service: self.service, delegate: self)
             self.viewModel?.getMovie()
-            setupView()
         }
+    }
     
     private func setupView() {
         self.title = "Movies Details"
@@ -39,8 +41,6 @@ class MoviesDetailViewController: UIViewController {
     
     }
     
-
-
 extension MoviesDetailViewController: MoviesDetailDelegate {
 
     func toogleLoading() {
@@ -53,9 +53,17 @@ extension MoviesDetailViewController: MoviesDetailDelegate {
         self.moviePopularity.text = String(describing: movie.popularity)
         self.movieReleaseDate.text = movie.releaseDate
         self.movieOverview.text = movie.overview
+        
+        if let url = movie.backdropPath, let fullUrl = URL(string: Constants().imageURL + url){
+                    self.movieImagePortrait.load(url: fullUrl)
+        print(fullUrl)
+            print(url)
+        }
     }
     
     func showError() {
         print("Ha ocurrido un error")
     }
 }
+
+
