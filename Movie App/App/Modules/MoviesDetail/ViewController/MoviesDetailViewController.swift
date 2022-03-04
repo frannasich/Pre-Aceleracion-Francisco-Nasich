@@ -20,7 +20,6 @@ class MoviesDetailViewController: UIViewController {
     @IBOutlet weak var originalLanguage: UILabel!
     @IBOutlet weak var moviePopularity: UILabel!
     @IBOutlet weak var movieReleaseDate: UILabel!
-
     @IBOutlet weak var movieOverview: UILabel!
     
     private let service = MoviesDetailService()
