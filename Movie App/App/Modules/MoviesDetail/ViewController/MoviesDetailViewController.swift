@@ -56,8 +56,6 @@ extension MoviesDetailViewController: MoviesDetailDelegate {
         
         if let url = movie.backdropPath, let fullUrl = URL(string: Constants().imageURL + url){
                     self.movieImagePortrait.load(url: fullUrl)
-        print(fullUrl)
-            print(url)
         }
     }
     
