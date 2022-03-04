@@ -28,7 +28,7 @@ class UserNameViewController: UIViewController {
     
     
     private func presentNoUserNameAlert(){
-        let alert = UIAlertController(title: "Alerta!", message: "Por favor ingrese un correo váñido primero", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Alerta!", message: "Por favor ingrese un correo válido primero", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
