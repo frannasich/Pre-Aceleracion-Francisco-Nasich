@@ -13,3 +13,11 @@ los detalles de la misma
 * Patrón de Arquitectura: MVVM
 * API: [**The Movie Database (TMDb)**](https://opentdb.com/ "The Movie Database (TMDb)")
 * IDE: Xcode
+
+## Muestras de Pantallas de la App
+* **Pantalla 1:**
+* ![image](https://user-images.githubusercontent.com/80861248/156803875-f2673ad8-e077-4543-845e-ebec25af5535.png)
+* **Pantalla 2:**
+* ![image](https://user-images.githubusercontent.com/80861248/156804120-72a3d059-c319-4f76-903a-49eb23490fdb.png)
+* **Pantalla 3:**
+* ![image](https://user-images.githubusercontent.com/80861248/156804302-def2ac9f-a195-4d72-a1bb-7ee560bf13ac.png)
